@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSmart | Minimal Shopping Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="nav">
+        <div class="logo">ShopSmart</div>
+        <button class="cart-btn">
+          <span class="cart-icon">🛒</span>
+          <span id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Curated essentials</p>
+        <h1>Shop smarter, not harder.</h1>
+        <p>
+          Simple catalog, transparent pricing, and fast checkout. Discover
+          everyday goods you actually need.
+        </p>
+        <a href="#products" class="cta">Browse Items</a>
+      </div>
+      <div class="hero-card">
+        <p>Free delivery on orders above $60</p>
+        <small>Delivery partners in 120+ cities</small>
+      </div>
+    </header>
+
+    <main>
+      <section class="products" id="products">
+        <header>
+          <div>
+            <p class="eyebrow">Catalogue</p>
+            <h2>Featured Items</h2>
+          </div>
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn" data-filter="home">Home</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="lifestyle">
+              Lifestyle
+            </button>
+          </div>
+        </header>
+
+        <div class="product-grid" id="product-grid">
+          <!-- injected by script -->
+        </div>
+      </section>
+
+      <section class="cart-panel" aria-live="polite">
+        <div class="cart-header">
+          <h3>Cart Summary</h3>
+          <button class="clear-cart" id="clear-cart">Clear</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+          <p class="empty">No items yet. Add something you love.</p>
+        </div>
+        <div class="cart-footer">
+          <div>
+            <span>Subtotal</span>
+            <strong id="cart-total">$0.00</strong>
+          </div>
+          <button class="checkout" type="button">Checkout</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> ShopSmart. Built with HTML, CSS & JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
